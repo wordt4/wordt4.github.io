@@ -4,15 +4,11 @@
 </head>
 <body>
   <h1>Home</h1>
-  <a href="https://drive.google.com/drive/u/0/my-drive">Files</a><br>
-  <a href="https://open.spotify.com/collection/tracks">Songs</a><br>
   <a href="https://www.youtube.com/">Videos</a><br>
-  <a href="https://github.com/wordt4?tab=repositories">Repos</a><br>
   <a href="https://dash.cloudflare.com/4d6cc25c6e1e20b4a9e17ce1f6ccf17b/home/domains">Domains</a><br>
   <a href="https://mail.google.com/mail/u/0/#inbox">Mail</a><br>
   <a href="google.com/maps/@37.5488512,-77.4569984,14z?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D">Maps</a><br>
   <a href="https://www.icloud.com/notes/note/UHJpdmF0ZTo6Tm90ZXM6OmN1cnJlbnRVc2VyOjpFRjBCMzNDRi03MENCLTQyMDctQTU1Qi0xN0M2MTBCMjMzQUE=">Notes</a><br>
-  <a href="https://virginiacommonwealth.instructure.com/?login_success=1">Courses</a><br>
   <a href="https://docs.google.com/document/u/0/?ec=wgc-docs-[module]-goto">Documents</a><br>
   <a href="https://excel.cloud.microsoft/?wdOrigin=WAC.EXCEL.HOME-BUTTON&wdPreviousSession=8726977f-8665-4427-8d87-8c66eee5e381&wdPreviousSessionSrc=AppHomeWeb">Spreadsheets</a><br>
   <a href="https://app.diagrams.net/">New diagram</a><br>
@@ -43,14 +39,28 @@
   <a href="https://1drv.ms/x/c/c1784e994c77fe11/IQDHo4DiGNIwSJJfa_2RNan-ATab3d5VNi3AXOfsFkaBBH4?e=Xp281l">Book 1</a><br>
   <a href="https://open.spotify.com/track/517EN9NN8AGJORVxaco39A?si=5737547bca8e44f2">Alone in Temporary Places II</a><br>
   <form>
-    <input placeholder="File name">
-    <input placeholder="Link">
-    <button>Add</button>
+    <input id="name" placeholder="File name"/>
+    <input id="link" placeholder="Link"/>
+    <button id="add">Add</button>
   </form>
+  <p>Accounts:</p>
+  <a href="https://google.com">Google</a><br>
+  <a href="https://account.microsoft.com/?ref=MeControl&refd=www.microsoft.com">Microsoft</a><br>
+  <a href="https://icloud.com">Apple</a><br>
+  <a href="https://dash.cloudflare.com/4d6cc25c6e1e20b4a9e17ce1f6ccf17b/home/domains">Cloudflare</a><br>
+  <a href="https://open.spotify.com">Spotify</a><br>
+  <a href="https://virginiacommonwealth.instructure.com/?login_success=1">Canvas</a><br>
+  <a href="https://github.com/wordt4?tab=repositories">GitHub</a><br>
   <br>
   <a href="https://github.com/wordt4/wordt4.github.io/edit/main/index.html">(edit)</a><br>
 </body>
 <script>
-  console.log("Hello")
+  const inputName = document.getElementById("name")
+  const inputLink = document.getElementById("link")
+  const newFileElement = '<a href="${link}">${name}</a><br>'
+
+  function addFile() {
+    console.log(newFileElement);
+  }
 </script>
 </html>
